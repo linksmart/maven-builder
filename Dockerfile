@@ -5,6 +5,8 @@ ENV SERVER_USERNAME=pipelines
 ENV SERVER_PASSWORD=""
 
 #ENV version
+RUN adduser -u 1000 -S builder
+USER builder
 
 # mounting configuration and extra dependencies volumes
 VOLUME /data
