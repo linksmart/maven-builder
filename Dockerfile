@@ -17,4 +17,4 @@ ADD settings.xml .
 #ONBUILD ADD .m2/settings.xml .
 
 # starting the agent
-ENTRYPOINT ["mvn","-s",".m2/settings.xml"]
+ENTRYPOINT ["mvn"]
