@@ -14,7 +14,7 @@ VOLUME /data
 WORKDIR /data
 
 ADD settings.xml .
-#ONBUILD ADD settings.xml .
+#ONBUILD ADD .m2/settings.xml .
 
 # starting the agent
-ENTRYPOINT ["mvn","-s","settings.xml"]
+ENTRYPOINT ["mvn","-s",".m2/settings.xml"]
