@@ -13,7 +13,7 @@ VOLUME /data
 
 WORKDIR /data
 
-ADD .m2/settings.xml .
+ADD settings.xml .m2/settings.xml
 #ONBUILD ADD .m2/settings.xml .
 
 # starting the agent
