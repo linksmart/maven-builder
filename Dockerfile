@@ -13,8 +13,8 @@ VOLUME /data
 
 WORKDIR /data
 
-ADD settings.xml .m2/settings.xml
+ADD settings.xml /maven/settings.xml
 #ONBUILD ADD .m2/settings.xml .
 
 # starting the agent
-ENTRYPOINT ["mvn"]
+ENTRYPOINT ["mvn","-s","/maven/settings.xml"]
