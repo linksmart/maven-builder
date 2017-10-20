@@ -8,6 +8,9 @@ ENV SERVER_PASSWORD=""
 RUN adduser -u 1000 -S builder
 USER builder
 
+# add git for deployment plugin
+RUN apk add --no-cache git
+
 # mounting configuration and extra dependencies volumes
 VOLUME /data
 
