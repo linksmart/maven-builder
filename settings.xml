@@ -276,55 +276,7 @@ under the License.
     -->
 
 	  
-	 <profile>
-          <id>linksmart-repo</id>
-         
-          <repositories>
-            <repository>
-              <id>central</id>
-              <url>https://linksmart.eu/repo/content/groups/public/</url>
-              <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-              </releases>
-              <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-              </snapshots>
-            </repository>
-			  <repository>
-              <id>linksmart-snapshot</id>
-              <url>https://linksmart.eu/repo/content/repositories/snapshots/</url>
-              <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-              </releases>
-              <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-              </snapshots>
-            </repository>
-			 <!--<site>
-				  <id>agents</id>
-				  <name>linksmart-service-agents-repository</name>
-				  <url>dav:https://linksmart.eu/repo/content/sites/agents</url>
-			</site>-->
-          </repositories>
-         <!--<pluginRepositories>
-            <pluginRepository>
-              <id>central</id>
-              <url>https://linksmart.eu/repo/content/repositories/central</url>
-              <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-              </releases>
-              <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-              </snapshots>
-           </pluginRepository>
-        </pluginRepositories>-->
-      </profile>
+	
 	 </profiles>
 
   <!-- activeProfiles
