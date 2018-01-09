@@ -16,11 +16,19 @@ VOLUME /data
 
 WORKDIR /data
 
+
 ADD settings.xml /maven/settings.xml
 ADD settings.xml /data/settings.xml
 ADD settings.xml /usr/share/maven/conf/settings.xml
 ADD settings.xml /home/builder/settings.xml
 ADD settings.xml /home/builder/.m2/settings.xml
+
+USER root
+
+RUN chown -R builder:1000 /data
+
+USER builder
+
 
 # starting the agent
 ENTRYPOINT ["mvn","-s","/maven/settings.xml"]
