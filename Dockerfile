@@ -12,7 +12,7 @@ RUN adduser -u 1000 -S builder
 USER builder
 
 # mounting configuration and extra dependencies volumes
-VOLUME /data
+#VOLUME /data
 
 WORKDIR /data
 
