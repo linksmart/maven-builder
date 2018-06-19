@@ -8,7 +8,7 @@ ENV SERVER_PASSWORD=""
 RUN apk add --no-cache git
 
 #ENV version
-RUN adduser -u 1000 -S builder
+RUN adduser -u 1001 -S builder
 USER builder
 
 # mounting configuration and extra dependencies volumes
@@ -25,7 +25,7 @@ ADD settings.xml /home/builder/.m2/settings.xml
 
 USER root
 
-RUN chown -R builder:1000 /data
+RUN chown -R builder:1001 /data
 
 USER builder
 
