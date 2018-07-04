@@ -4,8 +4,11 @@ MAINTAINER Jose Angel Carvajal Soto <carvajal@fit.fhg.de>
 ENV SERVER_USERNAME=pipelines
 ENV SERVER_PASSWORD=""
 
+# add git for deployment plugin
+RUN apk add --no-cache git
+
 #ENV version
-RUN adduser --system -u 1001 builder
+RUN adduser -u 1001 -S builder
 USER builder
 
 # mounting configuration and extra dependencies volumes
