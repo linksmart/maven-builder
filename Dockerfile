@@ -1,4 +1,4 @@
-FROM maven:3-jdk-8-alpine
+FROM maven:3-jdk-10
 MAINTAINER Jose Angel Carvajal Soto <carvajal@fit.fhg.de>
 
 ENV SERVER_USERNAME=pipelines
