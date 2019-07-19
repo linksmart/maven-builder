@@ -1,4 +1,7 @@
 language: script
 services: docker 
 script: 
-  - docker build --build-arg SERVER_PASSWORD=test -t linksmart/maven-builder . 
+  - docker build --build-arg SERVER_PASSWORD=$MAVEN_REPO_PASSWORD -t ingender/maven-builder . 
+deploy:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push ingender/maven-builder
