@@ -1,9 +1,7 @@
-language: script
-services: docker 
+language: minimal
 script: 
   - docker build --build-arg SERVER_PASSWORD=$MAVEN_REPO_PASSWORD -t ingender/maven-builder . 
+before_deploy: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin 
 deploy:
-  provider: script
-  script:
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker push ingender/maven-builder
+  - provider: script
+    script: docker push ingender/maven-builder
