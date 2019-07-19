@@ -1,4 +1,4 @@
-language: java
-jdk: openjdk10
-install: true
-script: ls #mvn clean install
+language: script
+services: docker 
+script: 
+  - docker build --build-arg SERVER_PASSWORD=test -t linksmart/maven-builder . 
